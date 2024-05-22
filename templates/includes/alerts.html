@@ -1,0 +1,10 @@
+<style>h5{color:white;}</style>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        <h5>{{ message }}</h5>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
